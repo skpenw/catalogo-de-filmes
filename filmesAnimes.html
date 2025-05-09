@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Filmes</title>
+    <style>
+        body {
+            display: flex; /* Ativa o Flexbox no corpo */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            flex-direction: column; /* Alinha os itens em coluna */
+            height: auto; /* Ajusta a altura do corpo para se adaptar ao conteúdo */
+            margin: 0; /* Remove a margem padrão do corpo */
+            background-color: #f0f0f0; /* Cor de fundo da página */
+        }
+
+        /* Estilo do cabeçalho */
+        .cabecalho {
+            display: flex; /* Ativa o Flexbox para o cabeçalho */
+            align-items: center; /* Centraliza verticalmente */
+            background-color: #a31efc; /* Cor de fundo do cabeçalho */
+            color: white; /* Cor do texto */
+            padding: 10px; /* Espaço interno do cabeçalho */
+            width: 100%; /* Largura total */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para efeito de profundidade */
+        }
+
+        .cabecalho img {
+            width: 70px; /* Largura do ícone */
+            height: 70px; /* Mantém a proporção do ícone */
+            margin-right: 30px; /* Espaço à direita do ícone */
+            margin-left: 30px;
+            border-radius: 40px;
+        }
+
+        h1 {
+            font-size: 48px; /* Tamanho da fonte do título */
+            text-align: center; /* Centraliza o texto */
+            margin: 20px 0; /* Espaço acima e abaixo do título */
+        }
+
+        .catalogo {
+            display: flex; /* Ativa o Flexbox para o contêiner de filmes */
+            flex-wrap: wrap; /* Permite que os filmes envolvam para a próxima linha */
+            justify-content: center; /* Centraliza horizontalmente */
+            max-width: 1200px; /* Largura máxima do contêiner */
+            gap: 20px; /* Espaçamento entre os filmes */
+            padding: 20px; /* Espaço interno do contêiner */
+        }
+
+        .filme {
+            background-color: white; /* Cor de fundo do filme */
+            border: 1px solid #ccc; /* Borda do filme */
+            border-radius: 8px; /* Bordas arredondadas */
+            width: calc(33.333% - 20px); /* Largura dos filmes em três colunas */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para efeito de profundidade */
+            overflow: hidden; /* Esconde o que passar do limite */
+        }
+
+        .filme img {
+            width: 100%; /* Imagem ocupa toda a largura do filme */
+            height: 550px; /* Mantém a proporção da imagem */
+        }
+
+        .filme h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px; /* Tamanho do título do filme */
+            padding: 10px; /* Espaço interno */
+            text-align: center; /* Centraliza o texto do título */
+        }
+
+        /* Estilo do rodapé */
+        footer {
+            background-color: #a31efc; /* Cor de fundo do rodapé */
+            color: white; /* Cor do texto */
+            text-align: center; /* Centraliza o texto */
+            padding: 10px; /* Espaço interno do rodapé */
+            width: 100%; /* Largura total */
+            position: relative; /* Posiciona o rodapé */
+            bottom: 0; /* Fixa o rodapé na parte inferior */
+        }
+        button {
+            display: flex; /* Ativa o Flexbox para o botão */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            width: 600px; /* Largura do botão */
+            height: 50px; /* Altura do botão */
+            background-color: #a31efc; /* Cor de fundo */
+            color: white; /* Cor do texto */
+            border: none; /* Sem borda */
+            border-radius: 5px; /* Bordas arredondadas */
+            cursor: pointer; /* Muda o cursor ao passar o mouse */
+            margin-top: 20px; /* Espaço acima do botão */
+        }
+
+        button:hover {
+            background-color: #6e0dec; /* Cor de fundo ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="cabecalho">
+        <img src="https://i.pinimg.com/control/564x/74/c6/21/74c62195f395d715b4279d6565e63bdf.jpg" alt="Ícone"> <!-- Substitua pela URL do seu ícone -->
+        <h1>Catálogo de Filmes</h1>
+    </div>
+
+    <div class="catalogo">
+        <div class="filme">
+            <a href="suzume.html">
+                <img src="https://i0.wp.com/vertentesdocinema.com/wp-content/uploads/2023/05/suzume-1-scaled.jpeg?fit=1707%2C2560&ssl=1" alt="Filme 1"> 
+                <h2>Suzume</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="yourname.html"> <!-- Link para a página do filme -->
+                <img src="https://m.media-amazon.com/images/I/71H+FjcP-HL._AC_UF1000,1000_QL80_.jpg" alt="Filme 2"> 
+                <h2>Your Name</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="thelast.html"> <!-- Link para a página do filme -->
+                <img src="https://br.web.img3.acsta.net/pictures/15/05/28/17/20/502228.jpg" alt="Filme 3">
+                <h2>Naruto - The Last</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="refrigerante.html"> <!-- Link para a página do filme -->
+                <img src="https://www.intoxianime.com/wp-content/uploads/2020/01/Cider-no-You-ni-Kotoba-ga-Wakiagaru-filme-anime-740x1048-1.jpg" alt="Filme 4">
+                <h2>Palavras que Borbulham como Refrigerante</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="olhosdegato.html"> <!-- Link para a página do filme -->
+                <img src="https://br.web.img3.acsta.net/pictures/20/05/26/15/30/0549431.jpg" alt="Filme 5"> 
+                <h2>Olhos de Gato</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="otempocomvoce.html"> <!-- Link para a página do filme -->
+                <img src="https://br.web.img3.acsta.net/pictures/19/10/10/22/10/0397933.jpg" alt="Filme 6">
+                <h2>O Tempo com Você</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="alemdoceu.html"> <!-- Link para a página do filme -->
+                <img src="https://m.media-amazon.com/images/S/pv-target-images/baacbab58596a66ff3df97604653ab125f9382ba2a63b634cc57254ed7524bef.jpg" alt="Filme 7">
+                <h2>Além do Céu</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="violet.html"> <!-- Link para a página do filme -->
+                <img src="https://play-lh.googleusercontent.com/proxy/NSeSBvtTPhqOSenylpxqQL4VeqUuln_InXQeU1VjtDklrAr7Hpi7vVF_9APnTD_LUhJjlcToeA7V4OV_5_hmbT8-w796bOjnWe4K7_tCVSiKzFyrJ2S_xv4l5LonZ6uCD1uXSteEerRWrw4sEPYs51ReLCoQcgxn9FAXsw" alt="Filme 8">
+                <h2>Violet Evergarden</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="ocean.html"> <!-- Link para a página do filme -->
+                <img src="https://s3.amazonaws.com/nightjarprod/content/uploads/sites/130/2023/03/02135123/ocean-waves-poster-Ghibli-scaled.jpg" alt="Filme 9">
+                <h2>Ocean Waves</h2>
+            </a>
+        </div>
+
+        <div class="filme">
+            <a href="jujutsu.html">
+                <img src="https://br.web.img2.acsta.net/pictures/21/10/27/11/49/5430171.jpg" alt="Filme 10">
+                <h2>Jujutsu Kaisen 0</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="mugen.html"> <!-- Link para a página do filme -->
+                <img src="https://br.web.img2.acsta.net/pictures/20/08/03/10/14/5958342.jpg" alt="Filme 11">
+                <h2>Demon Slayer - Mugen Train</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="bokunohero.html"> <!-- Link para a página do filme -->
+                <img src="https://br.web.img2.acsta.net/pictures/21/06/08/14/17/3325102.jpg" alt="Filme 12">
+                <h2>My Hero Academia - Ascensão dos Heróis</h2>
+            </a>
+        </div>
+        <button id="button" onclick="window.location.href='index.html'">Voltar para tela Inicial</button>
+    </div>
+    <footer>
+        <p>Animes Diversos</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Filmes</title>
+    <style>
+        body {
+            display: flex; /* Ativa o Flexbox no corpo */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            flex-direction: column; /* Alinha os itens em coluna */
+            height: auto; /* Ajusta a altura do corpo para se adaptar ao conteúdo */
+            margin: 0; /* Remove a margem padrão do corpo */
+            background-color: #f0f0f0; /* Cor de fundo da página */
+        }
+
+        /* Estilo do cabeçalho */
+        .cabecalho {
+            display: flex; /* Ativa o Flexbox para o cabeçalho */
+            align-items: center; /* Centraliza verticalmente */
+            background-color: #6988f0; /* Cor de fundo do cabeçalho */
+            color: white; /* Cor do texto */
+            padding: 10px; /* Espaço interno do cabeçalho */
+            width: 100%; /* Largura total */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para efeito de profundidade */
+        }
+
+        .cabecalho img {
+            width: 70px; /* Largura do ícone */
+            height: 70px; /* Mantém a proporção do ícone */
+            margin-right: 30px; /* Espaço à direita do ícone */
+            margin-left: 30px;
+            border-radius: 40px;
+        }
+
+        h1 {
+            font-size: 48px; /* Tamanho da fonte do título */
+            text-align: center; /* Centraliza o texto */
+            margin: 20px 0; /* Espaço acima e abaixo do título */
+        }
+
+        .catalogo {
+            display: flex; /* Ativa o Flexbox para o contêiner de filmes */
+            flex-wrap: wrap; /* Permite que os filmes envolvam para a próxima linha */
+            justify-content: center; /* Centraliza horizontalmente */
+            max-width: 1200px; /* Largura máxima do contêiner */
+            gap: 20px; /* Espaçamento entre os filmes */
+            padding: 20px; /* Espaço interno do contêiner */
+        }
+
+        .filme {
+            background-color: white; /* Cor de fundo do filme */
+            border: 1px solid #ccc; /* Borda do filme */
+            border-radius: 8px; /* Bordas arredondadas */
+            width: calc(33.333% - 20px); /* Largura dos filmes em três colunas */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para efeito de profundidade */
+            overflow: hidden; /* Esconde o que passar do limite */
+        }
+
+        .filme img {
+            width: 100%; /* Imagem ocupa toda a largura do filme */
+            height: 550px; /* Mantém a proporção da imagem */
+        }
+
+        .filme h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px; /* Tamanho do título do filme */
+            padding: 10px; /* Espaço interno */
+            text-align: center; /* Centraliza o texto do título */
+        }
+
+        /* Estilo do rodapé */
+        footer {
+            background-color: #6988f0; /* Cor de fundo do rodapé */
+            color: white; /* Cor do texto */
+            text-align: center; /* Centraliza o texto */
+            padding: 10px; /* Espaço interno do rodapé */
+            width: 100%; /* Largura total */
+            position: relative; /* Posiciona o rodapé */
+            bottom: 0; /* Fixa o rodapé na parte inferior */
+        }
+        button {
+            display: flex; /* Ativa o Flexbox para o botão */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            width: 600px; /* Largura do botão */
+            height: 50px; /* Altura do botão */
+            background-color: #6681fa; /* Cor de fundo */
+            color: white; /* Cor do texto */
+            border: none; /* Sem borda */
+            border-radius: 5px; /* Bordas arredondadas */
+            cursor: pointer; /* Muda o cursor ao passar o mouse */
+            margin-top: 20px; /* Espaço acima do botão */
+        }
+
+        button:hover {
+            background-color: #004175; /* Cor de fundo ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="cabecalho">
+        <img src="https://i.pinimg.com/control/474x/13/94/a2/1394a25342955f0613ba77a39947660f.jpg" alt="Ícone"> <!-- Substitua pela URL do seu ícone -->
+        <h1>Catálogo de Filmes</h1>
+    </div>
+
+    <div class="catalogo">
+        <div class="filme">
+            <a href="totoro.html">
+                <img src="https://static.wikia.nocookie.net/disney/images/9/96/Meu_Amigo_Totoro_-_P%C3%B4ster_Nacional.jpeg/revision/latest?cb=20220922022906&path-prefix=pt-br" alt="Filme 1"> 
+                <h2>Meu Amigo Totoro</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="casteloanimado.html"> <!-- Link para a página do filme -->
+                <img src="https://image.tmdb.org/t/p/w500/1hTfaEWktMJPxCk5nZNtK7F86C9.jpg" alt="Filme 2"> 
+                <h2>Castelo Animado</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="ponyo.html"> <!-- Link para a página do filme -->
+                <img src="https://br.web.img3.acsta.net/medias/nmedia/18/87/90/53/19962752.asp.jpg" alt="Filme 3">
+                <h2>Ponyo</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="aviagemdechihiro.html"> <!-- Link para a página do filme -->
+                <img src="https://i.pinimg.com/474x/78/92/82/789282ea5e2c44e0c2f2ceba4185936c.jpg" alt="Filme 4">
+                <h2>A Viagem de Chihiro</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="sussurrosdocoracao.html"> <!-- Link para a página do filme -->
+                <img src="https://i.pinimg.com/564x/a9/7f/a5/a97fa5c7798707e2f87ded92f94b8a13.jpg" alt="Filme 5"> 
+                <h2>Sussurros do Coração</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="dacolinakokuriko.html"> <!-- Link para a página do filme -->
+                <img src="https://i.pinimg.com/564x/23/2f/ef/232fef2f079f26f5e9a4ee70fe885386.jpg" alt="Filme 6">
+                <h2>Da Colina Kokuriko</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="vidasaovento.html"> <!-- Link para a página do filme -->
+                <img src="https://br.web.img2.acsta.net/pictures/14/02/21/16/51/373214.jpg" alt="Filme 7">
+                <h2>Vidas ao Vento</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="kiki.html"> <!-- Link para a página do filme -->
+                <img src="https://br.web.img3.acsta.net/pictures/bzp/01/40137.jpg" alt="Filme 8">
+                <h2>O Serviço de Entregas da Kiki</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="princesamononoke.html"> <!-- Link para a página do filme -->
+                <img src="https://i0.wp.com/studioghibli.com.br/wp-content/uploads/2020/04/Princesa-Mononoke-DVD-capa-vers%C3%A1til.jpg?fit=1500%2C2124&ssl=1" alt="Filme 9">
+                <h2>Princesa Mononoke</h2>
+            </a>
+        </div>
+
+        <div class="filme">
+            <a href="mundodospequeninos.html">
+                <img src="https://br.web.img2.acsta.net/r_1280_720/img/b8/02/b802e7187a05b7ac4c55cd3fb4b3964a.jpg" alt="Filme 9">
+                <h2>O Mundo dos Pequeninos</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="memorias.html"> <!-- Link para a página do filme -->
+                <img src="https://static.wikia.nocookie.net/studio-ghibli/images/7/7c/When_Marnie_Was_There_-_English.jpg/revision/latest/thumbnail/width/360/height/450?cb=20220409223902" alt="Filme 10">
+                <h2>As Memórias de Marnie</h2>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="castelonoceu.html"> <!-- Link para a página do filme -->
+                <img src="https://media.fstatic.com/IRPR5aUYYmGQ-yah2UzBToS7-2w=/210x312/smart/filters:format(webp)/media/movies/covers/2018/03/73634_f1.jpg" alt="Filme 11">
+                <h2>O Castelo no Céu</h2>
+            </a>
+        </div>
+
+        <button id="button" onclick="window.location.href='index.html'">Voltar para tela Inicial</button>
+    </div>
+    <footer>
+        <p>Studio Ghibli</p>
+    </footer>
+</body>
+</html>
